@@ -7,12 +7,19 @@
 #include <cstdlib>
 #include <list>
 #include <bits/stdc++.h>
-#include "open_set.h"
 #include "edge.h"
 #include "vertex.h"
-#include "graph.h"
+#include "open_set.h"
+#include "operator.h"
+
 
 using namespace std;
+
+
+
+/////////operator overloading
+
+
 
 
 void open_set::pop_top(){

@@ -4,8 +4,8 @@
 
 
 
-#ifndef OPENSET_H
-#define OPENSET_H
+#ifndef OPEN_SET_H
+#define OPEN_SET_H
 
 #include <iostream>
 #include <vector>
@@ -13,9 +13,10 @@
 #include <cstdlib>
 #include <list>
 #include <bits/stdc++.h>
-#include "edge.h"
 #include "vertex.h"
-#include "graph.h"
+#include "edge.h"
+
+
 
 using namespace std;
 

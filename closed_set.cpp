@@ -7,14 +7,18 @@
 #include <cstdlib>
 #include <list>
 #include <bits/stdc++.h>
-#include "close_set.h"
+#include "closed_set.h"
 #include "vertex.h"
 #include "edge.h"
-#include "open_set.h"
-#include "graph.h"
+#include "operator.h"
+
 
 
 using namespace std;
+
+
+/////////operator overloading
+
 
 
 void closed_set::insert(vertex& a){
@@ -37,3 +41,4 @@ int closed_set::size(){
 vertex closed_set::return_top(){
 	return CS.front();
 }
+

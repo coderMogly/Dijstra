@@ -4,8 +4,8 @@
 
 
 
-#ifndef CLOSESET_H
-#define CLOSESET_H
+#ifndef CLOSED_SET_H
+#define CLOSED_SET_H
 
 #include <iostream>
 #include <vector>
@@ -15,8 +15,6 @@
 #include <bits/stdc++.h>
 #include "vertex.h"
 #include "edge.h"
-#include "open_set.h"
-#include "graph.h"
 
 using namespace std;
 

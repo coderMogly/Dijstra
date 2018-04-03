@@ -15,8 +15,16 @@
 #include "vertex.h"
 #include "open_set.h"
 #include "closed_set.h"
-
+#include "operator.h"
 using namespace std;
+
+
+
+
+
+
+
+////////////////////////helper functions
 
 
 

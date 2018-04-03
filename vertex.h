@@ -18,9 +18,7 @@ using namespace std;
 
 class vertex{
 	public:
-		vertex(int a, int cost=0):ver(a),cost(cost){
-		//	cout<< "a new vertex made"<< a<<"cost"<<cost<<endl;
-		};
+		vertex(int a, int cost=0);
 		int ver;
 		int cost;
 		vertex* parent; 		// parent is used to remember the shortest path

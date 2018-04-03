@@ -8,49 +8,12 @@
 #include <list>
 #include <bits/stdc++.h>
 #include "vertex.h"
+
 using namespace std;
 
+vertex::vertex(int a, int cost):ver(a),cost(cost){}
 
 
-bool operator==(vertex a, vertex b){
-	if(a.ver==b.ver){
-		return true;
-	}else{
-		return false;
-	}
-}
-bool operator<(vertex a, vertex b){
-	if(a.cost<b.cost){
-		return true;
-	}else{
-		return false;
-	}
-}
-bool operator>(vertex a, vertex b){
-	if(a.cost>b.cost){
-		return true;
-	}else{
-		return false;
-	}
-}
-bool operator<=(vertex a, vertex b){
-	if(a.cost<=b.cost){
-		return true;
-	}else{
-		return false;
-	}
-}
-bool operator>=(vertex a, vertex b){
-	if(a.cost>=b.cost){
-		return true;
-	}else{
-		return false;
-	}
-}
-bool operator!=(vertex a, vertex b){
-	if(a.ver==b.ver){
-		return false;
-	}else{
-		return true;
-	}
-}
+
+
+
