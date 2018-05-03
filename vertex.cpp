@@ -11,7 +11,7 @@
 
 using namespace std;
 
-vertex::vertex(int a, int cost):ver(a),cost(cost){}
+vertex::vertex(int a, int cost):ver(a),cost(cost){}  // constructor
 
 
 
