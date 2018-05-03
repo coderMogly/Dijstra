@@ -12,3 +12,6 @@ open set: set of graph vertices that can be reached form already traversed graph
 operator.cpp : contains the operator overloading for vertices and edges
 
 Feel free to use it as you like.
+Would love to hear any thoughts and feedbacks
+
+email-id mails4mogly@gmail.com
