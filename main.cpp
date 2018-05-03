@@ -42,10 +42,12 @@ int random_cost_generator(){
 
 void graph_creation(graph& G, int& size, float& density){
 	//graph G;
+	// the following block intializes vertexes in graph
 	for(int i = 1; i<=size; i++){
 		vertex v = vertex(i);
 		G.add_vertex(v);	
 	}
+	// the following block initializes edges based on the density and probability
 	for(int i = 1; i<=size; i++){
 		for (int j = i; j<=size; j++){
 			if(i==j){
@@ -67,28 +69,28 @@ void graph_creation(graph& G, int& size, float& density){
 bool Dijstra(graph& G, vertex& st_node, vertex& end_node){
 	open_set OP;
 	closed_set CL;
-	OP.insert(st_node);
+	OP.insert(st_node);    // insert start node in open set
 	int start_cost = 0;
-	OP.chgcost(st_node, start_cost);
+	OP.chgcost(st_node, start_cost); // intialize start node cost
 	G.set_vertex_value(st_node, start_cost);
 	while(OP.min_cost()!=end_node && OP.size()!=0){
-		vertex  root_node= OP.min_cost();
-		list <vertex> niegh = G.nieghbours(root_node);
+		vertex  root_node= OP.min_cost();                   // taking out the minimum cost node
+		list <vertex> niegh = G.nieghbours(root_node);		// taking all the nieghbours of min cost node 
 		list <vertex>::iterator it;
-		for(it = niegh.begin(); it!= niegh.end();++it){
-			bool in_open = OP.contains(*it);
-			bool in_close = CL.contains(*it);
+		for(it = niegh.begin(); it!= niegh.end();++it){		// iterating through the nieghbours
+			bool in_open = OP.contains(*it);		// checking if open set contains the node
+			bool in_close = CL.contains(*it);		// checking if closed set contains the node
 			if(!in_close){
 				if(!in_open){
 					//vertex  root_node= OP.min_cost();
 					int cost_root = G.get_vertex_value(root_node);
-					edge* temp = G.get_edge(*it, root_node);
+					edge* temp = G.get_edge(*it, root_node);	// getting the edge from the graph
 					int cost_edge = G.get_edge_value(*temp);
 					int ne_cost = cost_edge+cost_root;
 					OP.insert(*it);
 					OP.chgcost(*it, ne_cost);
 					G.set_vertex_value(*it, ne_cost);
-					G.update_parent(*it, root_node);
+					G.update_parent(*it, root_node);		//updating parent to keep track of path
 				}else{
 					//vertex root_node= OP.min_cost();
 					int cost_root = G.get_vertex_value(root_node);
@@ -114,7 +116,7 @@ bool Dijstra(graph& G, vertex& st_node, vertex& end_node){
 	}
 };
 
-void print_shortest_path(graph G, vertex& st_node, vertex& end_node){
+void print_shortest_path(graph G, vertex& st_node, vertex& end_node){	// printing the path found
 	vertex* end = G.get_vertex(end_node.ver);
 	vertex* start = G.get_vertex(st_node.ver);
 	vertex* temp = end;
